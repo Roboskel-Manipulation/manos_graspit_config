@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(manos_graspit_config)
+find_package(catkin REQUIRED)
+catkin_package()
+
+include_directories()
