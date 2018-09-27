@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<robot name="schunk_pg70">
+
+    <link name="gripper_link"/>
+
+    <joint name="pg70_base_joint" type="fixed" >
+      <parent link="gripper_link" />
+      <child link="pg70_base_link" />
+    </joint>
+
+
+<material name="silver">
+  <color rgba="0.5 0.5 0.5 1"/>
+</material>
+
+<material name="light_silver">
+  <color rgba="0.7 0.7 0.7 1"/>
+</material>
+
+<material name="white">
+  <color rgba="1 1 1 1"/>
+</material>
+
+<material name="black">
+  <color rgba="0 0 0 1"/>
+</material>
+
+<!--     PALM -->
+    <link name="pg70_base_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://schunk_pg70/meshes/pg70.dae" />
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://schunk_pg70/meshes/pg70.dae" />
+        </geometry>
+        <material name="silver"/>
+      </collision>
+      <inertial>
+          <origin xyz="0.000019 -0.000347 0.028892"/>
+         <mass value="2.0"/>
+         <inertia ixx="0.000002" ixy="0.0" ixz="0.0" iyy="0.000001" iyz="0.0" izz="0.000002"/>
+      </inertial>
+    </link>
+
+<!-- LEFT FINGER BASE -->
+    
+    <joint name="pg70_finger1_joint" type="prismatic" >
+      <parent link="pg70_base_link" />
+      <child link="pg70_finger1_link" />
+      <limit effort="100" lower="-0.001" upper="0.04" velocity="2.0"/>
+      <origin xyz="0 0.0765 0.04" rpy="0 0 0"/>
+      <axis xyz="0 0 -1" />
+    </joint>
+
+    <link name="pg70_finger1_link">
+      <visual>
+        <geometry>
+          <box size="0.03 0.01 0.01"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.03 0.01 0.01"/>
+        </geometry>
+        <material name="black" />
+      </collision>
+       <!-- <inertial> <origin xyz="0 0 0" rpy="0 0 0"/> <mass value="1"/> <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/> </inertial> -->
+    </link>
+    
+<!-- LEFT FINGERTIP -->
+    
+    <joint name="pg70_fingertip_left_joint" type="fixed" >
+      <parent link="pg70_finger1_link" />
+      <child link="pg70_fingertip_left_link" />
+      <origin xyz="-0.015 0.045 -0.0025" rpy="0 1.57079632679 0"/>
+    </joint>
+
+    <link name="pg70_fingertip_left_link">
+      <visual>
+         <geometry>
+          <mesh filename="package://manos_description/meshes/schunk_pg70/finger.stl" />
+        </geometry>
+        <material name="white"/>
+      </visual>
+      <collision>
+         <geometry>
+          <mesh filename="package://manos_description/meshes/schunk_pg70/finger.stl" />
+        </geometry>
+        <material name="white"/>
+      </collision>
+    </link>
+    
+<!-- RIGHT FINGER BASE -->
+
+    <joint name="pg70_finger2_joint" type="prismatic" >
+      <mimic joint="pg70_finger1_joint" multiplier="1" offset="0"/>
+      <parent link="pg70_base_link" />
+      <child link="pg70_finger2_link" />
+      <limit effort="100" lower="-0.001" upper="0.04" velocity="2.0"/>
+      <origin xyz="0 0.0765 -0.04" rpy="0 0 0"/>
+      <axis xyz="0 0 1" />
+    </joint>
+
+    <link name="pg70_finger2_link">
+      <visual>
+        <geometry>
+          <box size="0.03 0.01 0.01"/>
+        </geometry>
+    <material name="black"/>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.03 0.01 0.01"/>
+        </geometry>
+        <material name="black"/>
+      </collision>
+       <!-- <inertial> <origin xyz="0 0 0" rpy="0 0 0"/> <mass value="1"/> <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/> </inertial> -->
+    </link>
+    
+<!-- RIGHT FINGERTIP -->
+
+    <joint name="pg70_fingertip_right_joint" type="fixed" >
+      <parent link="pg70_finger2_link" />
+      <child link="pg70_fingertip_right_link" />
+      <origin xyz="0.015 0.045 0.0025" rpy="0 -1.57079632679 0"/>
+   </joint>
+
+    <link name="pg70_fingertip_right_link">
+      <visual>
+         <geometry>
+          <mesh filename="package://manos_description/meshes/schunk_pg70/finger.stl" />
+        </geometry>
+    <material name="white" />
+      </visual>
+      <collision>
+         <geometry>
+          <mesh filename="package://manos_description/meshes/schunk_pg70/finger.stl" />
+        </geometry>
+        <material name="white"/>
+     </collision>
+    </link>
+
+     <link name="gripper_power_cable">
+    <visual>
+      <geometry>
+        <cylinder length="0.035" radius="0.012"/>
+        <material name="light_silver"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.035" radius="0.012"/>
+        <material name="light_silver"/>
+      </geometry>
+    </collision>
+ </link>
+
+  <link name="gripper_power_box">
+    <visual>
+      <geometry>
+        <box size="0.047 0.072 0.072"/>
+         <material name="silver"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+       <box size="0.047 0.072 0.072"/>
+      </geometry>
+        <material name="silver"/>
+    </collision>
+  </link>
+
+  <joint name="gripper_power_joint" type="fixed">
+    <parent link="pg70_base_link"/>
+    <child link="gripper_power_box"/>
+    <origin xyz="0.004 0.03 0.08" rpy="0 1.57079632679 0" />
+ </joint>
+
+ <joint name="gripper_power_cable_joint" type="fixed">
+    <parent link="gripper_power_box"/>
+    <child link="gripper_power_cable"/>
+    <origin xyz="-0.011 -0.011 0.011" rpy="0 0 1.57079632679" />
+ </joint>
+
+</robot>

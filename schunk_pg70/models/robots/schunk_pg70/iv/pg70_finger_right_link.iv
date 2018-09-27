@@ -1,0 +1,50 @@
+#Inventor V2.1 ascii
+
+
+DEF _pg70_finger_right_link Separator {
+
+  Material {
+    ambientColor 0.2 0.2 0.2
+    diffuseColor 1 0 0
+    transparency 0
+
+  }
+  Separator {
+
+    MatrixTransform {
+      matrix 1 0 0 0
+        0 -1 0 0
+        0 0 -1 0
+        0 0 0 1
+
+    }
+    Cube {
+      width 30
+      height 10
+      depth 10
+
+    }
+  }
+  Material {
+    ambientColor 0.2 0.2 0.2
+    diffuseColor 1 0 0
+    transparency 0
+
+  }
+  Separator {
+
+    MatrixTransform {
+      matrix 1 0 0 0
+        0 -4.8965276e-012 -1 0
+        0 1 -4.8965276e-012 0
+        0 10 -45 1
+
+    }
+    Cube {
+      width 30
+      height 10
+      depth 100
+
+    }
+  }
+}
