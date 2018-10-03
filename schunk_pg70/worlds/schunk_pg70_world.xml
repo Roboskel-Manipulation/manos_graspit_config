@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <world>
-    <graspableBody>
+    <!-- <graspableBody>
         <filename>models/objects/ashtray.xml</filename>
         <transform>
             <fullTransform>(+1 0 0 0)[0 +250 0]</fullTransform>
         </transform>
-    </graspableBody>
+    </graspableBody> -->
 	<robot>
 		<filename>models/robots/schunk_pg70/schunk_pg70.xml</filename>
 		<dofValues>0.0195 0.0195 </dofValues>
