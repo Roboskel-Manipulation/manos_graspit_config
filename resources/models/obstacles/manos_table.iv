@@ -7,7 +7,7 @@ Separator {
     emissiveColor   0.0 0.0 0.0
     }
     Translation {
-    translation 0 559.1 -539.938
+    translation 0 0 430
     }
     Separator {
         BaseColor {
@@ -16,12 +16,12 @@ Separator {
     Cube {
         width   1000
         height  1000
-        depth   43
+        depth   25
     }
     }
     Separator {
     Translation {
-        translation 400 432.5 -381
+        translation 400 432.5 -430
     }
     DEF leg+0 Separator {
         BaseColor {
@@ -33,25 +33,25 @@ Separator {
         }
         Cylinder {
         radius  25
-        height  762
+        height  835
         }
     }
     }
     Separator {
     Translation {
-        translation -400 432.5 -381
+        translation -400 432.5 -430
     }
     USE leg+0
     }
     Separator {
     Translation {
-        translation 400 -432.5 -381
+        translation 400 -432.5 -430
     }
     USE leg+0
     }
     Separator {
     Translation {
-        translation -400 -432.5 -381
+        translation -400 -432.5 -430
     }
     USE leg+0
     }
