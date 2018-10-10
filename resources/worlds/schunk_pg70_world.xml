@@ -3,28 +3,28 @@
     <graspableBody>
         <filename>models/objects/orange_ball.xml</filename>
         <transform>
-                <translation>0 200 -88.5</translation>
-                <orientation>0 0 0</orientation>
+                <translation>180 250 472.5</translation>
+                <orientation>0 0 0 1</orientation>
         </transform>
     </graspableBody>
     <obstacle>
         <filename>models/obstacles/manos_table.xml</filename>
         <transform>
-                <translation>0 -200 400</translation>
-                <orientation>0 0 0</orientation>
+                <translation>0 0 0</translation>
+                <orientation>0 0 0 1</orientation>
         </transform>
     </obstacle>
-	<robot>
-		<filename>models/robots/schunk_pg70/schunk_pg70.xml</filename>
-		<dofValues>0.0195 0.0195 </dofValues>
-		<transform>
-			<fullTransform>(+1 0 0 0)[0 0 0]</fullTransform>
-		</transform>
-	</robot>
-	<camera>
-		<position>+0 +0 +500</position>
-		<orientation>0 0 0 1</orientation>
-		<focalDistance>+500</focalDistance>
-	</camera>
+    <robot>
+        <filename>models/robots/schunk_pg70/schunk_pg70.xml</filename>
+        <dofValues>0.0195 0.0195 </dofValues>
+        <transform>
+            <fullTransform>(0 0.7 -0.7 0.7)[-100 100 600]</fullTransform>
+        </transform>
+    </robot>
+    <camera>
+        <position>0 -1000 1200</position>
+        <orientation>0.7 0 0 1.5</orientation>
+        <focalDistance>+500</focalDistance>
+    </camera>
 </world>
 
