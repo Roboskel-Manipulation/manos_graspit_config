@@ -29,15 +29,14 @@
     <link name="pg70_base_link">
       <visual>
         <geometry>
-          <mesh filename="package://schunk_pg70/meshes/pg70.dae" />
+          <mesh filename="package://manos_description/meshes/schunk_pg70/pg70.dae" />
         </geometry>
         <material name="silver"/>
       </visual>
       <collision>
         <geometry>
-          <mesh filename="package://schunk_pg70/meshes/pg70.dae" />
+          <mesh filename="package://manos_description/meshes/schunk_pg70/pg70.dae" />
         </geometry>
-        <material name="silver"/>
       </collision>
       <inertial>
           <origin xyz="0.000019 -0.000347 0.028892"/>
@@ -67,7 +66,6 @@
         <geometry>
           <box size="0.03 0.01 0.01"/>
         </geometry>
-        <material name="black" />
       </collision>
        <!-- <inertial> <origin xyz="0 0 0" rpy="0 0 0"/> <mass value="1"/> <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/> </inertial> -->
     </link>
@@ -91,7 +89,6 @@
          <geometry>
           <mesh filename="package://manos_description/meshes/schunk_pg70/finger.stl" />
         </geometry>
-        <material name="white"/>
       </collision>
     </link>
     
@@ -111,13 +108,12 @@
         <geometry>
           <box size="0.03 0.01 0.01"/>
         </geometry>
-    <material name="black"/>
+      <material name="black"/>
       </visual>
       <collision>
         <geometry>
           <box size="0.03 0.01 0.01"/>
         </geometry>
-        <material name="black"/>
       </collision>
        <!-- <inertial> <origin xyz="0 0 0" rpy="0 0 0"/> <mass value="1"/> <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/> </inertial> -->
     </link>
@@ -135,13 +131,12 @@
          <geometry>
           <mesh filename="package://manos_description/meshes/schunk_pg70/finger.stl" />
         </geometry>
-    <material name="white" />
+      <material name="white" />
       </visual>
       <collision>
          <geometry>
           <mesh filename="package://manos_description/meshes/schunk_pg70/finger.stl" />
         </geometry>
-        <material name="white"/>
      </collision>
     </link>
 
@@ -149,13 +144,12 @@
     <visual>
       <geometry>
         <cylinder length="0.035" radius="0.012"/>
-        <material name="light_silver"/>
       </geometry>
+      <material name="light_silver"/>
     </visual>
     <collision>
       <geometry>
         <cylinder length="0.035" radius="0.012"/>
-        <material name="light_silver"/>
       </geometry>
     </collision>
  </link>
@@ -164,14 +158,13 @@
     <visual>
       <geometry>
         <box size="0.047 0.072 0.072"/>
-         <material name="silver"/>
       </geometry>
+      <material name="silver"/>
     </visual>
     <collision>
       <geometry>
        <box size="0.047 0.072 0.072"/>
       </geometry>
-        <material name="silver"/>
     </collision>
   </link>
 
