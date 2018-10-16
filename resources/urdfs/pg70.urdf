@@ -51,7 +51,7 @@
       <parent link="pg70_base_link" />
       <child link="pg70_finger1_link" />
       <limit effort="100" lower="-0.001" upper="0.04" velocity="2.0"/>
-      <origin xyz="0 0.0765 0.04" rpy="0 0 0"/>
+      <origin xyz="0 0.0475 0.04" rpy="0 0 0"/>
       <axis xyz="0 0 -1" />
     </joint>
 
@@ -99,7 +99,7 @@
       <parent link="pg70_base_link" />
       <child link="pg70_finger2_link" />
       <limit effort="100" lower="-0.001" upper="0.04" velocity="2.0"/>
-      <origin xyz="0 0.0765 -0.04" rpy="0 0 0"/>
+      <origin xyz="0 0.0475 -0.04" rpy="0 0 0"/>
       <axis xyz="0 0 1" />
     </joint>
 
@@ -143,13 +143,13 @@
      <link name="gripper_power_cable">
     <visual>
       <geometry>
-        <cylinder length="0.035" radius="0.012"/>
+          <box size="0.012 0.012 0.035"/>
       </geometry>
       <material name="light_silver"/>
     </visual>
     <collision>
       <geometry>
-        <cylinder length="0.035" radius="0.012"/>
+          <box size="0.012 0.012 0.035"/>
       </geometry>
     </collision>
  </link>
@@ -171,13 +171,13 @@
   <joint name="gripper_power_joint" type="fixed">
     <parent link="pg70_base_link"/>
     <child link="gripper_power_box"/>
-    <origin xyz="0.004 0.03 0.08" rpy="0 1.57079632679 0" />
+    <origin xyz="0 -0.015 0.08" rpy="0 1.57079632679 0" />
  </joint>
 
  <joint name="gripper_power_cable_joint" type="fixed">
     <parent link="gripper_power_box"/>
     <child link="gripper_power_cable"/>
-    <origin xyz="-0.011 -0.011 0.011" rpy="0 0 1.57079632679" />
+    <origin xyz="-0.011 -0.021 0.031" rpy="0 0 1.57079632679" />
  </joint>
 
 </robot>
