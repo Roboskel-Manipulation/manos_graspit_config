@@ -1,0 +1,5 @@
+<launch>
+    <node name="graspit_planning_service" pkg="grasp_planning_graspit_ros" type="grasp_planning_service" respawn="false" output="screen">
+        <rosparam file="$(find manos_graspit_config)/config/graspit_planner_opt.yaml" command="load" />
+    </node>
+</launch>
