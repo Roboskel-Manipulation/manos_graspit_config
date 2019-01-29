@@ -38,9 +38,9 @@ default_finish_with_autograsp: true
 grasp_msg_position_factor: 0.001
 
 # specifies whether to save the results as inventor files in the folder specified in "results_output_directory".
-save_result_files_inventor: true
+save_result_files_inventor: false
    
 # specifies whether to save the results as graspit world files in the folder specified in "results_output_directory".
-save_result_files_graspit: true
+save_result_files_graspit: false
 
 results_output_directory: "~/.ros/"
