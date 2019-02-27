@@ -14,15 +14,15 @@ save_world_topic: graspit_save_world
 eg_planning_topic: graspit_eg_planning
 
 # the default maximum planning steps to use for the Eigengrasp planner.
-default_max_planning_steps: 70000
+default_max_planning_steps: 75000
 
 # the default number of times the planning is repeated (complete planner re-starts).
-default_num_repeat_planning: 10
+default_num_repeat_planning: 4
 
 # Default setting: keep the n best results of a planning run.
 # This number multiplied by default_num_repeat_planning is the maximum
 # number of resulting grasps for a call fo the service.
-default_num_keep_results: 2000
+default_num_keep_results: 999
 
 # Default setting: Each result is 'finalized' with an additional Auto-Grasp,
 # to ensure fingers are really closed around the object.
